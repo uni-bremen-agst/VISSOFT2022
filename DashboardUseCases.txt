@@ -1,0 +1,157 @@
+Hier sind Antworten von Axivion-Mitarbeitern auf die Frage, welche Anwendungsfälle der Project Index des Dashboard habe.
+Die Antworten wurden anonymisiert, daher ist hier nur von "Mitarbeiter A" usw. die Rede; erwähnte Mitarbeiter- oder Produktnamen wurden geschwärzt.
+Getrennt werden die einzelnen Antworten durch "== Name ==", direkt hiernach folgt der Originaltext (es wurden dementsprechend auch keine Grammatik- oder Rechtschreibfehler korrigiert).
+
+
+== Originaltext der gestellten Frage ==
+Wir können nun die Erosions-Findings aus dem Axivion-Dashboard
+auch in unseren Code-Cities in SEE visualisieren. Die beiden
+Darstellungen (Code-City in SEE versus Project-Index mit Tree/List
+Layout) wollen wir nunmehr in einer Studie vergleichen. Dazu benötigen
+wir repräsentative reale Fragen, die Entwickler mit Hilfe des Project-
+Index im Dashboard beantworten wollen. Deshalb möchte ich dich gerne
+bitten, uns anhand deiner Erfahrungen ein paar typische Arten
+von Informationen zu nennen, die sich Entwickler mit Hilfe des
+Project-Index im Dashboard besorgen. Herzlichen Dank!
+
+
+== Mitarbeiter A ==
+Den Project-Index an sich gab es ja schon, bevor ich bei Axivion war,
+daher kann ich nicht die Originalgedanken nennen, die dahinter stehen.
+Ich versuche aber aus meiner Entwicklerperspektive die Gedanken
+weiterzugeben die mir vermittelt wurden / ich mitbekommen habe, bzw. die
+mir als logisch erscheinen. Auf theoretischer Ebene kann dir sicherlich
+██████ auch noch was dazu sagen, konkrete UseCases aus dem Feld gibt es
+vermutlich eher von ██████, ██████ und ██████.
+
+Meines Wissens ist der Project-Index deutlich nachrangig an "Häufigkeit
+der Nutzung" gegenüber der Issue-Tabelle. Ich erhalte zu diesem
+jedenfalls ungleich weniger Anfragen im Support.
+
+Hier jedenfalls mal ein paar UseCases, die mir so einfallen:
+
+- "Erzeugung eines simplen, abheftbaren Reports" durch CSV-Export der
+flachen Liste
+- "Identifikation von Hotspots", also von Ordnern und Dateien, wo es
+besonders viele Issues gibt
+- "Kontrolle der vollständigen Analyse", also man kann relativ schnell
+feststellen, das bestimmte Bereiche/Ordner überhaupt keine Verstöße
+enthalten und dadurch bestimmte Arten von Analyse/Konfigurationsfehlern
+erkennen (setzt voraus, dass man eine gewisse Erwartungshaltung hat, wo
+Verstöße vorhanden sein müssten)
+- "Konfiguration von Suppressions/Excludes" Der Project-Index kann bei
+dieser Aufgabe assistieren, indem man sich durch den Baum klickt und
+sieht, wo bspw. Ordner sind, die generierte Dateien oder 3rdParty
+Dateien enthalten.
+- "Im Repository/Quellcode browsen" - Hierfür sollten unsere Kunden
+geeignetere Werkzeuge haben, dennoch kommt es vll. vor
+- "Eliminierung von Verstößen anhand der Datei/Ordnerstruktur" quasi den
+Project-Index als Einstiegspunkt zum Verstoßfixing nehmen - hierzu wäre
+es unheimlich praktisch, wenn die Verstoßzahlen gleich Hyperlinks auf
+die Issueliste mit entsprechender Filterung wären, fällt mir grade so auf
+
+Bei den Hotspots gibt es auch schon sehr lange die Idee noch
+dateibasierte Metriken anzuzeigen und zu aggregieren, um die "Hotspots"
+auf andere Art und Weise identifizieren zu können. Diese ist bisher aber
+nicht implementiert.
+
+Über die Häufigkeit, wie die UseCases in der Realität genutzt werden,
+kann ich überhaupt keine Aussage treffen.
+
+
+== Mitarbeiter B ==
+So wie ich das sehe, gibt es zwei gute Gruende den Projekt-Index zu
+benutzen:
+
+1. Code Smell Hotspots auf Datei- oder Modul/Ordner-Ebene erkennen
+
+    - mit ████████████ auch Komplexitaets-Hotspots finden
+        -> der User wird neben der Anzahl unserer Issue Kinds auch
+verschiedene Metriken als Spalten in dem Projekt-Index konfigurieren koennen
+
+    - wenn ich Feature XY implementieren soll + ich als Architekt weiss
+in welches Modul das Feature kommt, kann mir der Projekt-Index helfen
+meine Zeitschaetzung entsprechend
+    hoch zu korrigieren
+        -> gibt es viele Code Smells im Modul oder wurden einige
+Metrik-Schwellwerte ueberschritten?
+
+2. Eine bekannte Navigation verwenden, die der User in seiner IDE kennt
+
+    - Von den Dateien zu den Issues finden.
+    - In der Issueliste ist es umgekehrt. Ich betrachte einzelne issues
+und kann entsprechend zur Datei gehen.
+
+
+== Mitarbeiter C ==
+Vorweg muss ich sagen. dass wir die Nutzer des Dashboards nicht in
+freier Wildbahn beobachten. Daher wissen wir nicht, wie unsere Nutzer
+das WIRKLICH einsetzen. Wir kennen nur die Unterstellungen, die wir für
+das Design der Dashboard-Seiten
+haben. Aus meiner Sicht eignet sich die Index-Seite zu folgenden
+Zwecken:
+
+- Im List-Mode grob die Dateien mit den meisten Issues finden:
+  Grob, weil man z.B. bei den Style- und Metrik-Verstößen nicht mehr
+  weiter nach den Arten der Issues (z.B. nach spezifischen Regeln oder
+  Regelgruppen) filtern kann.
+  Außerdem hat man immer alle Dateien im
+  Blick, auch welche, die vielleicht nicht direkt interessieren (z.B.
+  generierte Dateien, 3rd-Party-Zeugs).
+
+- Im Tree-Mode grob Hot-Spots auf Verzeichnis-Ebene identifizieren:
+  Warum grob? Siehe oben.
+  Unterstellung hier ist, dass die Verzeichnis-Struktur etwas über
+  Architektur und/oder Zuständigkeiten aussagt.
+  Die Architekturstruktur als Hierarchie zu nutzen, wäre wünschenswert,
+  ist aber nicht vorgesehen (und im Detail nicht so einfach, weil man
+  im Mapping z.B. auch einzelne Funktionen ummappen könnte, wie soll
+  das in dieser Darstellung sinnvoll angezeigt werden)
+
+Zusammenfassend kann ich sagen, dass es immer um Aussagen über große
+Anzahlen von Issues a einer Stelle (Verzeichnis, Datei) geht.
+
+- Navigation:
+  Außerdem lässt sich der Index natürlich auch nutzen, um zu
+  navigieren. Z.B. zu einer bestimmten Datei. Da interessieren einen
+  die Werte der Issues überhaupt nicht.
+
+Was auch generell fehlt ist, dass MetrikWERTE nicht in der Tabelle
+auftauchen können (z.B. die Summe der LOC oder sowas).
+
+
+== Mitarbeiter D ==
+Wirklich viel Erfahrung liegt da nicht vor, das sind eher Mutmaßungen.
+Der Projektindex könnte genutzt werden für:
+- Planung: In welche Dateien/Verzeichnisse sollte (mehr) Zeit für
+interne Qualitätsverbesserung gesteckt werden?
+- Hat eine bestimmte Datei überhaupt irgendwelche Verstöße (ggf. einer
+bestimmten Sorte)?
+- Welche Verstöße hat eine bestimmte Datei (diese alle mal browsen)?
+- Welche Datei/welches Verzeichnis hat die meisten Verstöße (einer
+bestimmten Sorte)?
+
+Daneben ist der Projektindex auch ein Mittel, um zur Dashboard-Anzeige
+des Quelltextes
+einer Datei zu kommen, z.B. als Workaround für fehlendes
+Cross-Referencing, wenn man die
+Deklaration zu einer Definition ansehen möchte.
+
+
+== Mitarbeiter E ==
+"Der Projektindex im Modus "initiales Analysesetup" aus Sicht "Axivion
+Setup Mensch":
+
+* Vollständigkeit prüfen: wurden Dateien in bestimmten Ordnern erfasst
+und zeigen Findings? Wurden die "vergessen"?
+* Sinnhaftigkeit der Analyse: Greifen die Regeln richtig? Unglaublich
+viele Findings => vielleicht generierter Code, der nicht geprüft werden
+soll; keine Findings => vielleicht was excluded was nicht soll?
+
+Sicht "Axivion Consumer"
+
+* s.o.
+* Hotspots finden
+* top-down-navigation
+* muss "Änderungen in einer Datei machen" und will mir vorher einen
+Überblick über die Zahlen in der "Nähe" verschaffen."

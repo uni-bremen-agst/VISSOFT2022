@@ -1,0 +1,49 @@
+== SOLUTION SEE ==
+
+Note:
+Subsequent mistakes are not counted as mistakes (i.e., wrong file, but "correct" number).
+
+Syntax:
+n. Name (LOC) : Number of issues / most common type
+
+Game:
+1. GraphRenderer (1712) : SV
+2. ArchitectureInteraction (764) : MV
+3. AbstractSEECity (541) : AV
+4. SEECity (453) : MV
+5. SceneQueries (435) : AV
+
+Layout: (SV)
+1. Sublayout (302) : 22
+2. LayoutVertex (189) : 38
+3. NodeTransform (55) : 10
+4. LayoutNodes (53) : 0
+5. IGameNode (45) : 0
+
+Controls: (MV)
+1. SEEInput (517) : 6
+2. PlayerSettings (380) : 18
+3. KeyBindings (309) : 4
+4. CodeSpaceManager (202) : 22
+5. DictationInput (176) : 4
+
+GO: (AV)
+1. NodeDecorationController (671) : 13
+2. DonutFactory (567) : 0
+3. CylinderFactory (294) : 0
+4. TextureGenerator (274) : 0
+5. IScale (237) : 0
+
+Net: (AV)
+1. Network (604) : 6
+2. LoadCityAction (336) : 124
+3. Server (280) : 3
+4. TransformView (259) : 0
+5. AbstractAction (217) : 0
+
+Utils:
+1. MathExtensions (408) : SV
+2. RandomTrees (200) : SV
+3. Filenames (182) : SV
+4. JLGParser (162) : SV
+5. Raycasting (161) : AV

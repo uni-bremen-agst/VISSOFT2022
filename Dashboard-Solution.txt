@@ -1,0 +1,67 @@
+Each of the directories (e.g., Utils) used in the tasks are listed here along with their
+biggest files (LOC in parentheses after the filename) and occurences of each type
+of code smell for that file. Note that the Dashboard groups together files differently
+than SEE, so the values here may differ from the ones in SEE-Solution.txt.
+
+Utils:
+ActionHistory.cs (561) : {'AV': 13, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 20, 'SV': 48}
+GXLParser.cs (460) : {'AV': 0, 'CL': 1, 'CY': 0, 'DE': 0, 'MV': 89, 'SV': 148}
+ConfigIO.cs (420) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 19, 'SV': 43}
+MathExtensions.cs (417) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 11, 'SV': 60}
+ConfigWriter.cs (340) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 6, 'SV': 17}
+
+Tools:
+ReflexionAnalysis.cs (2088) : {'AV': 19, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 62, 'SV': 274}
+RandomGraphs.cs (343) : {'AV': 2, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 58, 'SV': 14}
+MetricAggregator.cs (195) : {'AV': 1, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 7, 'SV': 13}
+MetricAggregator.cs.meta (11) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 0, 'SV': 0}
+RandomGraphs.cs.meta (11) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 0, 'SV': 0}
+
+Net:
+Network.cs (625) : {'AV': 6, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 56, 'SV': 47}
+Server.cs (296) : {'AV': 3, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 26, 'SV': 16}
+PacketHandler.cs (136) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 5, 'SV': 7}
+Client.cs (124) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 14, 'SV': 12}
+Synchronizer.cs (119) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 2, 'SV': 12}
+
+Layout:
+Sublayout.cs (332) : {'AV': 12, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 33, 'SV': 22}
+LayoutVertex.cs (198) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 75, 'SV': 38}
+ILayoutNode.cs (119) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 2, 'SV': 4}
+NodeTransform.cs (66) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 5, 'SV': 12}
+LayoutNodes.cs (61) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 2, 'SV': 0}
+
+GameObjects:
+NodeDecorationController.cs (687) : {'AV': 13, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 47, 'SV': 62}
+GameObjectExtensions.cs (593) : {'AV': 11, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 9, 'SV': 10}
+TextureGenerator.cs (282) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 20, 'SV': 49}
+Materials.cs (215) : {'AV': 6, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 17, 'SV': 39}
+ErosionIssues.cs (171) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 6, 'SV': 10}
+
+Game:
+GraphRenderer.cs (1757) : {'AV': 11, 'CL': 3, 'CY': 0, 'DE': 0, 'MV': 47, 'SV': 128}
+EvolutionRenderer.cs (1482) : {'AV': 15, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 149, 'SV': 138}
+SEEJLGCityAnimation.cs (1181) : {'AV': 4, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 74, 'SV': 111}
+SceneAnimator.cs (906) : {'AV': 0, 'CL': 3, 'CY': 0, 'DE': 0, 'MV': 170, 'SV': 77}
+ArchitectureInteraction.cs (781) : {'AV': 0, 'CL': 3, 'CY': 0, 'DE': 0, 'MV': 91, 'SV': 34}
+
+DataModel:
+Tags.cs (53) : {'AV': 5, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 3, 'SV': 1}
+Observable.cs (47) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 2, 'SV': 2}
+Observer.cs (27) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 4, 'SV': 1}
+Observable.cs.meta (11) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 0, 'SV': 0}
+DataModel.cs.meta (11) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 0, 'SV': 0}
+
+Controls:
+SEEInput.cs (526) : {'AV': 10, 'CL': 2, 'CY': 0, 'DE': 0, 'MV': 6, 'SV': 13}
+PlayerSettings.cs (406) : {'AV': 8, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 18, 'SV': 44}
+KeyBindings.cs (319) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 4, 'SV': 17}
+CodeSpaceManager.cs (220) : {'AV': 65, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 24, 'SV': 36}
+DictationInput.cs (198) : {'AV': 0, 'CL': 1, 'CY': 0, 'DE': 0, 'MV': 4, 'SV': 21}
+
+CameraPaths:
+CameraPath.cs (483) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 26, 'SV': 61}
+PathReplay.cs (255) : {'AV': 3, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 8, 'SV': 18}
+CameraRecorder.cs (223) : {'AV': 3, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 5, 'SV': 15}
+PathData.cs (28) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 0, 'SV': 4}
+PathReplay.cs.meta (15) : {'AV': 0, 'CL': 0, 'CY': 0, 'DE': 0, 'MV': 0, 'SV': 0}
