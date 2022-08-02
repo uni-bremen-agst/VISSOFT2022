@@ -1,5 +1,5 @@
 # VISSOFT2022
-Material and data of the experiment described in our VISSOFT 2022 publication "Visualizing Code Smells: Tables or Code Cities? A Controlled Experiment".
+This repository contains material and data of the experiment described in our (Falko Galperin, Rainer Koschke, Marcel Steinbeck) VISSOFT 2022 publication "Visualizing Code Smells: Tables or Code Cities? A Controlled Experiment".
 
 ## Included files
 - **[`_Vissoft2022CodeSmellsCodeCities.pdf`](_Vissoft2022CodeSmellsCodeCities.pdf)**: The paper submitted to Vissoft 2022.
@@ -19,3 +19,8 @@ Material and data of the experiment described in our VISSOFT 2022 publication "V
 - **[`findCorrelation.py`](findCorrelation.py)**: A python script which calculates Pearson correlation coefficients between architecture, style, and metric violations.
 - **[`findDash.py`](findDash.py)**: A python script which calculates the solution for the Dashboard tasks. Output is contained in `Dashboard-Solution.txt`.
 - **[`SEE-Solution.txt`](SEE-Solution.txt)**: Solution for the SEE tasks. These were manually determined by using the Unity Editor.
+- **[`Visualizing code smells in SEE.mp4`](Visualizing code smells in SEE.mp4)**: This is a short demonstration of how code smells are visualized in the Code City software SEE. 
+    The Code City used as a basis here is the source code of SEE itself.
+    The smells are visualized as icons above each node, whereas the red tint of an icon shows the relative occurrence of that kind of code smell within its level. 
+    At the bottom, key inputs are shown to demonstrate how SEE can be controlled.
+    This video has been shown to participants of the study.
