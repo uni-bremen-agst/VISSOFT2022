@@ -29,7 +29,7 @@ with open("SEE.csv", "r") as csvfile:
 
 entries.sort(key=lambda x: (x[1], x[2]), reverse=True)
 
-counted = defaultdict(lambda: 0)
+counted: defaultdict = defaultdict(lambda: 0)
 currentone = ""
 for entry in entries:
     counted[entry[1]] += 1
